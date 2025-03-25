@@ -2,6 +2,11 @@
 A Marketplace for Used Cars with a Twist!
 Welcome to **Lowball Motors**, the ultimate used car marketplace where bargain hunters and hagglers rejoice! This unique platform allows buyers to make lowball offers on listed cars, turning price negotiation into a fun and interactive experience.
 
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
+# Description
+Buying and selling cars has never been this much fun! **Lowball Motors** connects buyers and sellers while encouraging negotiation through its lowball offer feature. Buyers can browse listings, make outrageous offers (or fair ones!), and sellers can choose to accept, decline, or counter these offers. It's car shopping, reimagined.
+
 # Table of Contents
 
 1. Description
@@ -13,11 +18,6 @@ Welcome to **Lowball Motors**, the ultimate used car marketplace where bargain h
 7. API Endpoints
 8. Contributing
 9. License
-
-# Description
-Buying and selling cars has never been this much fun! **Lowball Motors** connects buyers and sellers while encouraging negotiation through its lowball offer feature. Buyers can browse listings, make outrageous offers (or fair ones!), and sellers can choose to accept, decline, or counter these offers. It's car shopping, reimagined.
-
-# Features
 
 * **User Roles**: Separate accounts for buyers and sellers with secure JWT authentication.
 
