@@ -19,6 +19,8 @@ Buying and selling cars has never been this much fun! **Lowball Motors** connect
 8. Contributing
 9. License
 
+# Features
+
 * **User Roles**: Separate accounts for buyers and sellers with secure JWT authentication.
 
 * **Car Listing**: Sellers can upload car details, descriptions, and images.
