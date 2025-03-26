@@ -63,8 +63,8 @@ Buying and selling cars has never been this much fun! **Lowball Motors** connect
 # Steps
 
 1. Clone the repo:
-      - cs ../client
-      - npm install
+     - cs ../client
+     - npm install
 
 2. Navigate to the server folder and install backend dependencies
 
