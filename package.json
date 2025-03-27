@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +19,13 @@
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.14.1",
     "pg-hstore": "^2.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "sequelize": "^6.37.6"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "@vitejs/plugin-react": "^4.3.4",
+    "nodemon": "^3.1.9",
+    "vite": "^6.2.3"
   }
 }
