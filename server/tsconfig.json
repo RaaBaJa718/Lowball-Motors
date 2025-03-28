@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    /* Modules */
+    "rootDir": "src",  /* The root folder for your source files. */
+    "outDir": "dist",  /* The folder where compiled files will be placed. */
+    "esModuleInterop": true,  /* Enables default imports for non-ES modules like express */
+    "moduleResolution": "node",  /* Use Node.js style module resolution */
+    "target": "ESNext"  /* Target modern JavaScript (can be adjusted if needed). */
+  },
+  "include": ["src"],  /* Include the src folder for TypeScript files. */
+  "typeRoots": ["./node_modules/@types", "./src/types"]  /* Custom types location. */
+}
