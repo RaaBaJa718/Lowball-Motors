@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+  background-color: #007BFF; /* Blue header */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Separates elements to opposite sides */
+  align-items: center; /* Aligns elements vertically in the center */
+  padding: 1em 2em; /* Adds space inside the header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* LowBall Motors Title Styling */
+.header-title h1 {
+  color: white;
+  font-size: 1.8em; /* Large font size for the title */
+  margin: 0; /* Removes unwanted spacing */
+}
+
+/* Menu Icon Styling */
+.menu-icon {
+  display: flex;
+  flex-direction: column; /* Stacks the lines vertically */
+  gap: 5px; /* Space between lines */
+  cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+.menu-icon .line {
+  width: 25px;
+  height: 3px;
+  background-color: white; /* White color for the lines */
+  border-radius: 3px; /* Rounded edges */
+}
+
+/* Sign-In Icon Section */
+.header-signin {
+  position: relative; /* Enables hover text positioning */
+  display: flex; /* Flexbox layout for alignment */
+  align-items: center;
+}
+
+.signin-icon {
+  width: 40px;
+  height: 40px;
+  background-color: orange; /* White background for the icon */
+  border-radius: 50%; /* Makes the icon circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Pointer cursor for hover effect */
+  position: relative;
+}
+
+.signin-icon::before {
+  content: ''; /* Placeholder for person icon */
+  width: 20px;
+  height: 20px;
+  background: url('path/to/person-icon.png') no-repeat center center; /* Add path to your icon */
+  background-size: contain; /* Ensures the icon fits perfectly */
+}
+
+
+
+.header-signin:hover .signin-hover-text {
+  display: block; /* Shows the text on hover */
+}
+
+/* Search Section Styling */
+.search-section {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 1em 2em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  justify-content: center;
+}
+
+.search-fields {
+  display: flex;
+  gap: 1em; /* Space between input fields */
+  flex-wrap: wrap; /* Wraps fields on smaller screens */
+}
+
+.search-input {
+  padding: 0.7em;
+  font-size: 1em;
+  border: 1px solid #ddd; /* Border for the input fields */
+  border-radius: 5px; /* Rounded edges */
+  width: 150px; /* Fixed width for inputs */
+}
+
+.search-btn {
+  background-color: orange; /* Orange background for the button */
+  color: white;
+  border: none;
+  padding: 0.8em 1.5em; /* Padding around the button */
+  font-size: 1em;
+  border-radius: 5px; /* Rounded edges */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+.search-btn:hover {
+  background-color: #ff8c00; /* Darker orange on hover */
+}
+
+/* Grid Layout Styling */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+  gap: 1em;
+  padding: 2em;
+}
+
+.grid-item {
+  background-color: white; /* White background for grid items */
+  border: 1px solid #ddd; /* Border around each grid item */
+  border-radius: 5px; /* Rounded corners */
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Hover effect */
+}
+
+.grid-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333; /* Dark gray background */
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-fields {
+    gap: 0.5em; /* Reduce spacing for smaller screens */
+  }
+
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+}
