@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // For navigation to CarDetails
 
 function CarGrid() {
+  const navigate = useNavigate();
+
   const placeholderCars = [
     { id: 1, name: "2023 Tesla Model 3", details: "Long Range - Mileage: 39,521 miles", price: "$34,998", image: "/icons/car1.jpg" },
     { id: 2, name: "2020 Toyota Camry XSE", details: "Technology Package - Mileage: 22,704 miles", price: "$28,516", image: "/icons/car2.jpg" },
@@ -16,10 +19,20 @@ function CarGrid() {
     { id: 15, name: "2019 Jeep Wrangler", details: "Unlimited Sahara - Mileage: 30,234 miles", price: "$36,150", image: "/icons/car15.jpg" },
   ];
 
+  // Function to handle car selection
+  const handleCarClick = (carId) => {
+    navigate(`/cars/${carId}`); // Navigate to the car details page
+  };
+
   return (
     <section className="grid-layout">
       {placeholderCars.map((car) => (
-        <div className="grid-item" key={car.id}>
+        <div
+          className="grid-item"
+          key={car.id}
+          onClick={() => handleCarClick(car.id)} // Navigate on click
+          style={{ cursor: 'pointer' }} // Add pointer cursor for better UX
+        >
           <img src={car.image} alt={car.name} className="car-image" />
           <h3>{car.name}</h3>
           <p>{car.details}</p>
