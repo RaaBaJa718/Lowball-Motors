@@ -101,6 +101,8 @@ header {
   display: flex;
   width: 300%; /* Allows sliding of multiple images */
   animation: slide 10s infinite; /* Auto-slide animation */
+  height: 100%; /* Ensure it takes the full container height */
+  overflow: hidden; /* Hides content outside the carousel */
 }
 
 .hero-image {
