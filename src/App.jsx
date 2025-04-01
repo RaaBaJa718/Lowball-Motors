@@ -11,6 +11,7 @@ import Register from './components/auth/register'; // Import Register component
 import CarDetails from './components/CarDetails'; // Import CarDetails component
 import CarForm from './components/CarForm'; // Import CarForm for sellers
 import Offers from './components/offers'; // Import Offers for buyers
+import About from './components/About';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/add-car" element={<CarForm />} />
           {/* Offers page */}
           <Route path="/offers" element={<Offers />} />
+          <Route path="/about" element={<About />} /> 
         </Routes>
         <Footer />
       </div>
