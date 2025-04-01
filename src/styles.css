@@ -1,114 +1,34 @@
 /* General Styles */
 body {
-  font-family: 'Open Sans', Arial, sans-serif; /* Body font */
+  font-family: 'Open Sans', Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Header Styling */
-header {
-  background-color: #007BFF; /* Blue header */
-  display: flex; /* Flexbox layout */
-  justify-content: space-between; /* Separates elements to opposite sides */
-  align-items: center; /* Aligns elements vertically in the center */
-  padding: 1em 2em; /* Adds space inside the header */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-/* Menu Icon Styling */
-.menu-icon {
-  display: flex;
-  flex-direction: column; /* Stacks the lines vertically */
-  gap: 5px; /* Space between lines */
-  cursor: pointer; /* Pointer cursor for interactivity */
-}
-
-.menu-icon .line {
-  width: 25px;
-  height: 3px;
-  background-color: white; /* White color for the lines */
-  border-radius: 3px; /* Rounded edges */
-}
-
-/* LowBall Motors Title Styling */
-.header-title h1 {
-  font-family: 'Roboto', sans-serif; /* Title font */
-  color: white;
-  font-size: 2.5em; /* Larger title */
-  margin: 0; /* Removes unwanted spacing */
-}
-
-/* Sign-In Icon Section */
-.header-signin {
-  position: relative; /* Enables hover text positioning */
-  display: flex; /* Flexbox layout for alignment */
-  align-items: center;
-}
-
-.signin-icon {
-  width: 40px;
-  height: 40px;
-  background-color: white; /* White background for the icon */
-  border-radius: 50%; /* Makes the icon circular */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer; /* Pointer cursor for hover effect */
-  position: relative;
-}
-
-.signin-icon::before {
-  content: ''; /* Placeholder for person icon */
-  width: 20px;
-  height: 20px;
-  background: url('path/to/person-icon.png') no-repeat center center; /* Add path to your icon */
-  background-size: contain; /* Ensures the icon fits perfectly */
-}
-
-/* Hover Text for Sign-In */
-.signin-hover-text {
-  display: none; /* Hidden by default */
-  position: absolute;
-  top: 50px; /* Places the text below the icon */
-  left: 50%;
-  transform: translateX(-50%); /* Centers the text horizontally */
-  background-color: white; /* White background for visibility */
-  color: black;
-  padding: 5px 10px; /* Adds space around the text */
-  border: 1px solid black; /* Border for the hover text */
-  border-radius: 5px; /* Rounded edges for the text box */
-  font-size: 0.9em; /* Slightly smaller font size */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
-
-.header-signin:hover .signin-hover-text {
-  display: block; /* Shows the text on hover */
-}
-
 /* Hero Section Styling */
 .hero-section {
   position: relative;
-  height: 50vh; /* Height of the hero section */
-  background-color: #333; /* Background color as fallback */
+  height: 50vh;
+  background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Hide excess carousel content */
+  overflow: hidden;
 }
 
 .hero-carousel {
   display: flex;
-  width: 300%; /* Allows sliding of multiple images */
-  animation: slide 10s infinite; /* Auto-slide animation */
-  height: 100%; /* Ensure it takes the full container height */
-  overflow: hidden; /* Hides content outside the carousel */
+  width: 300%;
+  animation: slide 10s infinite;
+  height: 100%;
+  overflow: hidden;
 }
 
 .hero-image {
-  width: 100%; /* Full width per image */
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image fits perfectly */
+  object-fit: cover;
 }
 
 .hero-text {
@@ -116,91 +36,86 @@ header {
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 2em;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Text shadow for visibility */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Search Section Styling (Glassmorphism) */
 .search-section {
-  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 2em; /* Adds space inside the section */
-  display: flex; /* Flexbox layout for alignment */
-  justify-content: center; /* Centers items horizontally */
-  align-items: center; /* Centers items vertically */
-  text-align: center; /* Align text inside input fields and button */
-  flex-direction: column; /* Stack items vertically */
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
-
 
 .search-fields {
   display: flex;
-  flex-direction: column; /* Stack fields and button vertically */
-  gap: 1em; /* Add spacing between elements */
-  width: 100%; /* Ensure it stays responsive */
-  max-width: 400px; /* Restrict width on large screens */
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  max-width: 400px;
 }
-
-
 
 .search-input {
   padding: 0.7em;
   font-size: 1em;
-  border: 1px solid #ddd; /* Border for the input fields */
-  border-radius: 5px; /* Rounded edges */
-  width: 150px; /* Fixed width for inputs */
-  border: 1px solid #ddd; /* Adds a light border to inputs */
-
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 150px;
+  border: 1px solid #ddd;
 }
 
-.search-input, .search-btn {
-  display: block; /* Ensures each field and button behave the same way */
-  width: 100%; /* Makes fields and button the same width */
-  padding: 0.8em; /* Ensures consistent inner spacing */
-  font-size: 1em; /* Keeps the font size uniform */
-  border-radius: 5px; /* Consistent rounded edges */
-  box-sizing: border-box; /* Includes padding and borders in total width */
+.search-input,
+.search-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8em;
+  font-size: 1em;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
-
-
 
 .search-btn {
-  font-family: 'Roboto', sans-serif; /* Button font */
-  background-color: orange; /* Orange background for the button */
+  font-family: 'Roboto', sans-serif;
+  background-color: orange;
   color: white;
   border: none;
-  padding: 0.8em 1.5em; /* Padding around the button */
-  font-size: 1.1em; /* Larger button text */
-  border-radius: 5px; /* Rounded edges */
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Smooth hover transition */
+  transition: background-color 0.3s;
 }
 
 .search-btn:hover {
-  background-color: #ff8c00; /* Darker orange on hover */
+  background-color: #ff8c00;
 }
 
 /* Grid Layout Styling */
 .grid-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+  grid-template-columns: repeat(3, 1fr);
   gap: 1em;
   padding: 2em;
 }
 
 .grid-item {
-  background-color: #f9f9f9; /* Light gray background */
-  padding: 1em; /* Padding inside the grid item */
-  border: 1px solid #ddd; /* Border for separation */
-  border-radius: 5px; /* Rounded edges */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #f9f9f9;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-  text-align: center; /* Centers the text inside the footer */
-  background-color: #333; /* Dark footer background */
+  text-align: center;
+  background-color: #333;
   color: white;
-  padding: 1.5em 0; /* Adds padding to top and bottom */
-  font-size: 0.9em; /* Slightly smaller font size */
+  padding: 1.5em 0;
+  font-size: 0.9em;
 }
