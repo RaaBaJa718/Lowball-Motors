@@ -1,27 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
-function HeroSection() {
-  const images = [
-    '/icons/car4.jpg',
-    '/icons/car5.jpg',
-    '/icons/car6.jpg',
-  ];
+function HeroSection({ cars }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % cars.length);
     }, 3000); // Change image every 3 seconds
     return () => clearInterval(interval); // Cleanup on component unmount
-  }, [images.length]);
+  }, [cars.length]);
 
   return (
     <section className="hero-section">
       <div className="hero-carousel">
-        {images.map((image, index) => (
+        {cars.map((car, index) => (
           <img
             key={index}
-            src={image}
+            src={car.image}
             alt={`Featured Car ${index + 1}`}
             className={`hero-image ${index === currentImageIndex ? 'active' : 'inactive'}`}
             style={{
