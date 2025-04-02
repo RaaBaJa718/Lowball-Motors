@@ -1,9 +1,9 @@
-import { Router, Request, Response, NextFunction } from 'express';
+import { Router, Request, Response } from 'express';
 import { User } from '../models/user.js'; // Ensure this points to your Sequelize model
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
-export const login = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+export const login = async (req: Request, res: Response): Promise<void> => {
   try {
     const { username, password } = req.body;
 
