@@ -1,27 +1,19 @@
-import express from 'express';
-import {
-  getAllUsers,
-  getUserById,
-  createUser,
-  updateUser,
-  deleteUser,
-} from '../../controllers/user-controller.js';
+export const getUserById = async (_: Request): Promise<void> => {
+  // Implementation
+};
 
-const router = express.Router();
+export const getAllUsers = async (): Promise<void> => {
+  // Implementation
+};
 
-// GET /users - Get all users
-router.get('/', getAllUsers);
+export const createUser = async (_: Request, _res: Response): Promise<void> => {
+  // Implementation
+};
 
-// GET /users/:id - Get a user by id
-router.get('/:id', getUserById);
+export const updateUser = async (_req: Request): Promise<void> => {
+  // Implementation
+};
 
-// POST /users - Create a new user
-router.post('/', createUser);
-
-// PUT /users/:id - Update a user by id
-router.put('/:id', updateUser);
-
-// DELETE /users/:id - Delete a user by id
-router.delete('/:id', deleteUser);
-
-export { router as userRouter };
+export const deleteUser = async (_req: Request): Promise<void> => {
+  // Implementation
+};
