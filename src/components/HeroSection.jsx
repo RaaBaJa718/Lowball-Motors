@@ -4,11 +4,22 @@ function HeroSection({ cars }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
+    if (!cars || cars.length === 0) return; // Prevent errors if cars is empty
+
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % cars.length);
     }, 3000); // Change image every 3 seconds
+
     return () => clearInterval(interval); // Cleanup on component unmount
-  }, [cars.length]);
+  }, [cars]); // Re-run effect if cars change
+
+  if (!cars || cars.length === 0) {
+    return (
+      <section className="hero-section">
+        <h2 className="hero-text">Find Your Dream Car Today!</h2>
+      </section>
+    ); // Return a default message if no cars are available
+  }
 
   return (
     <section className="hero-section">
