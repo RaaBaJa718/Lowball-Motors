@@ -1,19 +1,15 @@
-export const getUserById = async (_: Request): Promise<void> => {
-  // Implementation
-};
+import { Router } from 'express';
 
-export const getAllUsers = async (): Promise<void> => {
-  // Implementation
-};
+const userRouter = Router();
 
-export const createUser = async (_: Request, _res: Response): Promise<void> => {
-  // Implementation
-};
+// Example user routes
+userRouter.get('/', (req, res) => {
+  res.send('Get all users');
+});
 
-export const updateUser = async (_req: Request): Promise<void> => {
-  // Implementation
-};
+userRouter.get('/:id', (req, res) => {
+  res.send(`Get user with ID ${req.params.id}`);
+});
 
-export const deleteUser = async (_req: Request): Promise<void> => {
-  // Implementation
-};
+// Export `userRouter` as a named export
+export { userRouter };
