@@ -3,7 +3,7 @@ import { Router } from 'express';
 const userRouter = Router();
 
 // Example user routes
-userRouter.get('/', (req, res) => {
+userRouter.get('/', (_, res) => {
   res.send('Get all users');
 });
 
