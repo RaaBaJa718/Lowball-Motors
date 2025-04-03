@@ -4,7 +4,8 @@ const dotenv = require("dotenv");
 const bcrypt = require("bcrypt");
 const { Client } = require("pg");
 
-dotenv.config(); // Load environment variables from .env file
+// Load environment variables from .env file
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -46,7 +47,11 @@ app.post("/api/auth/register", async (req, res) => {
 
     res.status(201).json({
       message: "User registered successfully!",
-      user: { id: result.rows[0].id, email: result.rows[0].email, role: result.rows[0].role },
+      user: {
+        id: result.rows[0].id,
+        email: result.rows[0].email,
+        role: result.rows[0].role,
+      },
     });
   } catch (err) {
     if (err.code === "23505") {
@@ -100,7 +105,10 @@ app.put("/api/users/:id", async (req, res) => {
 app.delete("/api/users/:id", async (req, res) => {
   const { id } = req.params;
   try {
-    const result = await client.query("DELETE FROM users WHERE id = $1 RETURNING id, email, role", [id]);
+    const result = await client.query(
+      "DELETE FROM users WHERE id = $1 RETURNING id, email, role",
+      [id]
+    );
 
     if (result.rowCount === 0) {
       return res.status(404).json({ message: "User not found!" });
