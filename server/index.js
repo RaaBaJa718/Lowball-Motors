@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 require("dotenv").config();
+const carRoutes = require("./routes/carRoutes");
+app.use("/api", carRoutes);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
