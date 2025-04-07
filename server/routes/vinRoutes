@@ -1,0 +1,23 @@
+const express = require("express");
+const axios = require("axios");
+const router = express.Router();
+
+// VIN Decoder Route
+router.get("/decode-vin/:vin", async (req, res) => {
+  const { vin } = req.params;
+
+  try {
+    const response = await axios.get(`https://example-vin-decoder-api.com/decode/${vin}`, {
+      headers: {
+        Authorization: `Bearer ${process.env.VIN_API_KEY}`,
+      },
+    });
+
+    res.json(response.data);
+  } catch (error) {
+    console.error("Error decoding VIN:", error.message);
+    res.status(500).json({ error: "Failed to decode VIN" });
+  }
+});
+
+module.exports = router;
