@@ -8,7 +8,6 @@ const app = express();
 
 // Import routes and models
 const carRoutes = require("./routes/carRoutes");
-const vinRoutes = require("./routes/vinRoutes");
 const imageRoutes = require("./routes/imageRoutes");
 const sequelize = require("./db"); // Import the database connection
 const Car = require("./models/Car"); // Import your model
@@ -28,7 +27,6 @@ app.use(bodyParser.json());
 
 // Register routes
 app.use("/api", carRoutes);
-app.use("/api", vinRoutes);
 app.use("/api", imageRoutes);
 
 // Test route
