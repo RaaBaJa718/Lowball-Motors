@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "server": "cd server && npm start",
     "seed": "cd server && npm run seed",
-    "start": "vite build cd server npm start"
+    "start": "vite build && cd server && npm start"
   },
   "dependencies": {
   "@radix-ui/react-select": "^2.1.6",
