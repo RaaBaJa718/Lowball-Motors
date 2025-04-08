@@ -1,0 +1,32 @@
+services:
+  - name: frontend
+    type: web
+    env: static
+    staticPublishPath: build
+    buildCommand: npm install && npm run build
+    branch: main
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://backend-service.onrender.com # Update after deploying the backend
+
+  - name: backend
+    type: web
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    branch: main
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase: database
+      - key: NODE_ENV
+        value: production
+      - key: VIN_API_KEY
+        value: your-vin-decoder-api-key
+
+databases:
+  - name: database
+    type: postgresql
+    plan: free
+    properties:
+      databaseName: lowball_motors
+      user: postgres
