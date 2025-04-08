@@ -17,7 +17,7 @@ services:
     branch: main
     envVars:
       - key: DATABASE_URL
-        fromDatabase: database
+        value: {{database.connectionString}}
       - key: NODE_ENV
         value: production
       - key: VIN_API_KEY
@@ -27,6 +27,3 @@ databases:
   - name: database
     type: postgresql
     plan: free
-    properties:
-      databaseName: lowball_motors
-      user: postgres
