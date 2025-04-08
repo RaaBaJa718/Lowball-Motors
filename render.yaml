@@ -4,7 +4,7 @@ services:
     env: static
     staticPublishPath: build
     buildCommand: npm install && npm run build
-    branch: main
+    branch: raa-646
     envVars:
       - key: REACT_APP_API_URL
         value: https://backend-service.onrender.com # Update after deploying the backend
@@ -14,7 +14,7 @@ services:
     env: node
     buildCommand: npm install
     startCommand: npm start
-    branch: main
+    branch: raa-646
     envVars:
       - key: DATABASE_URL
         fromDatabase:
