@@ -17,7 +17,8 @@ services:
     branch: main
     envVars:
       - key: DATABASE_URL
-        value: {{database.connectionString}}
+        fromDatabase:
+          name: database
       - key: NODE_ENV
         value: production
       - key: VIN_API_KEY
